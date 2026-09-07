@@ -1,26 +1,104 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Laboratorul 1</title>
-    </head>
-    <body>
-        <h1> Prima Lecție</h1>
-        <p> Specialiatea DAW grupa DAW-241 anul 3</p>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorarea Adancimilor Oceanice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <ul>
-  <li>mango</li>
-  <li>banana</li>
-  <li>peach</li>
-  <li>Guava</li>
-</ul>
+  <header class="site-header">
+    <div class="container">
+      <h1>Proiect Adancimi Oceanice</h1>
+      <p class="subtitle">Un studiu simplu despre straturile marine si conditiile din adancuri</p>
+    </div>
+  </header>
 
-<button>Apasa pentru nimic</button>
+  <nav class="nav-bar">
+    <div class="container">
+      <ul class="nav-links">
+        <li><a href="#overview">Prezentare</a></li>
+        <li><a href="#zones">Zone Oceanice</a></li>
+        <li><a href="#interactive">Laborator Interactiv</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<form>
-  <label >Numne</label><br>
-  <input type="text" ><br>
-  <label>Prenume</label><br>
-  <input type="text">
-</form>
-    </body>
+  <main class="container">
+
+    <section id="overview" class="card">
+      <h2>Prezentare Generala a Straturilor Oceanului</h2>
+      <p>
+        Oceanul este impartit in straturi orizontale distincte, in functie de cantitatea de lumina solara
+        care patrunde in apa. Pe masura ce adancimea creste, lumina dispare complet, temperatura apei
+        scade aproape de pragul de inghet, iar presiunea atinge valori extreme.
+      </p>
+    </section>
+
+    <section id="zones" class="card">
+      <h2>Zonele Principale ale Oceanului</h2>
+      <div class="grid-container">
+
+        <article class="zone-box">
+          <h3>Zona de Suprafata</h3>
+          <p class="zone-depth">Adancime: 0 - 200 metri</p>
+          <p>
+            Cunoscuta si sub numele de zona luminata de soare. Lumina este abundenta, permitand fotosinteza.
+            Aici traieste cea mai mare parte a vietii marine cunoscute, inclusiv recifele de corali si broastele testoase.
+          </p>
+        </article>
+
+        <article class="zone-box">
+          <h3>Zona de Crepuscul</h3>
+          <p class="zone-depth">Adancime: 200 - 1.000 metri</p>
+          <p>
+            Doar o lumina albastra slaba patrunde pana aici. Plantele nu pot creste, iar animalele s-au adaptat
+            cu ochi mari si bioluminiscenta pentru a supravietui in semiintuneric.
+          </p>
+        </article>
+
+        <article class="zone-box">
+          <h3>Zona de Miezul Noptii</h3>
+          <p class="zone-depth">Adancime: 1.000 - 4.000 metri</p>
+          <p>
+            Intuneric total si presiune imensa a apei. Temperaturile sunt aproape de inghet.
+            Creaturi adaptate extrem, cum ar fi pestele unditar si calamarul de mare adancime, traiesc in acest mediu ostil.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="interactive" class="card">
+      <h2>Vizualizator Interactiv al Zonelor</h2>
+      <p class="instruction-text">
+        Apasa pe un buton de mai jos pentru a vedea detaliile fiecarei zone marine.
+      </p>
+
+      <div class="button-row">
+        <button id="btn-surface" class="btn">Zona de Suprafata</button>
+        <button id="btn-twilight" class="btn">Zona de Crepuscul</button>
+        <button id="btn-midnight" class="btn">Zona de Miezul Noptii</button>
+      </div>
+
+      <div class="info-display">
+        <h3 id="display-title">Zona de Suprafata</h3>
+        <p id="display-depth">Adancime: 0 - 200 metri</p>
+        <p id="display-text">
+          Lumina solara abundenta permite dezvoltarea plantelor si sustine aproximativ 90 la suta din toate speciile marine.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Site de test</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
