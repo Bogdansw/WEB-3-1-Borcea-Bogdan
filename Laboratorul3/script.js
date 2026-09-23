@@ -3,19 +3,19 @@ function calculateSum(a, b) {
 }
 
 console.log("Suma 5 + 7:", calculateSum(5, 7));
-console.log("Suma 12 + 8:", calculateSum(12, 8));
+console.log("Suma 12 + 12:", calculateSum(12, 12));
 
 const student = {
     name: "Bogdan",
-    age: 18,
-    grade: 9,
+    surname: "Borcea",
+    age: 18,,
     introduce: function() {
         console.log("Sunt " + this.name + " și am " + this.age + " ani.");
     }
 };
 
 student.introduce();
-student.grade = 10;
+student.grade = 10
 console.log("Noua notă:", student.grade);
 
 const choices = ["piatra", "hartia", "foarfeca"];
