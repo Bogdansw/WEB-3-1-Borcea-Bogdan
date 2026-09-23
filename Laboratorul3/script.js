@@ -15,7 +15,7 @@ const student = {
 };
 
 student.introduce();
-student.grade = 10
+student.grade = 10;
 console.log("Noua notă:", student.grade);
 
 const choices = ["piatra", "hartia", "foarfeca"];
