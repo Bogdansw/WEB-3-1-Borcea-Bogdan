@@ -8,7 +8,7 @@ console.log("Suma 12 + 12:", calculateSum(12, 12));
 const student = {
     name: "Bogdan",
     surname: "Borcea",
-    age: 18,,
+    age: 18,
     introduce: function() {
         console.log("Sunt " + this.name + " și am " + this.age + " ani.");
     }
