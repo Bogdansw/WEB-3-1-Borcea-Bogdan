@@ -1,6 +1,6 @@
-function calculateSum(a, b) {
+const calculateSum = (a, b) => {
     return a + b;
-}
+};
 
 console.log("Suma 5 + 7:", calculateSum(5, 7));
 console.log("Suma 12 + 12:", calculateSum(12, 12));
@@ -9,8 +9,8 @@ const student = {
     name: "Bogdan",
     surname: "Borcea",
     age: 18,
-    introduce: function() {
-        console.log("Sunt " + this.name + " și am " + this.age + " ani.");
+    introduce: () => {
+        console.log("Sunt " + student.name + " și am " + student.age + " ani.");
     }
 };
 
@@ -25,12 +25,12 @@ const gameScore = {
     computer: 0,
     draws: 0,
 
-    displayScore: function() {
+    displayScore: () => {
         alert(
             "Scor actual:\n" +
-            "Jucător: " + this.player + "\n" +
-            "Calculator: " + this.computer + "\n" +
-            "Egalități: " + this.draws
+            "Jucător: " + gameScore.player + "\n" +
+            "Calculator: " + gameScore.computer + "\n" +
+            "Egalități: " + gameScore.draws
         );
     }
 };
@@ -43,12 +43,12 @@ const scissorsButton = document.getElementById("scissors");
 const newGameButton = document.getElementById("newGame");
 const gameInfo = document.getElementById("gameInfo");
 
-function getComputerChoice() {
+const getComputerChoice = () => {
     const index = Math.floor(Math.random() * choices.length);
     return choices[index];
-}
+};
 
-function getChoiceName(choice) {
+const getChoiceName = (choice) => {
     if (choice === "piatra") {
         return "Piatra";
     }
@@ -58,9 +58,9 @@ function getChoiceName(choice) {
     }
 
     return "Foarfeca";
-}
+};
 
-function getLeader() {
+const getLeader = () => {
     if (gameScore.player > gameScore.computer) {
         return "Jucătorul conduce";
     }
@@ -70,9 +70,9 @@ function getLeader() {
     }
 
     return "Egalitate";
-}
+};
 
-function updateGameInfo(playerChoice, computerChoice, result) {
+const updateGameInfo = (playerChoice, computerChoice, result) => {
     gameInfo.innerHTML =
         "<div class='line'>Alegerea ta: " + getChoiceName(playerChoice) + "</div>" +
         "<div class='line'>Alegerea calculatorului: " + getChoiceName(computerChoice) + "</div>" +
@@ -80,9 +80,9 @@ function updateGameInfo(playerChoice, computerChoice, result) {
         "<div class='line'>Scor: " + gameScore.player + " - " + gameScore.computer + "</div>" +
         "<div class='line'>Runde: " + rounds + "</div>" +
         "<div class='line'>Conducător: " + getLeader() + "</div>";
-}
+};
 
-function playRound(playerChoice) {
+const playRound = (playerChoice) => {
     if (gameScore.player >= 5 || gameScore.computer >= 5) {
         return;
     }
@@ -118,9 +118,9 @@ function playRound(playerChoice) {
         gameInfo.innerHTML +=
             "<div class='line'>Câștigător final: Calculatorul a câștigat jocul!</div>";
     }
-}
+};
 
-function resetGame() {
+const resetGame = () => {
     gameScore.player = 0;
     gameScore.computer = 0;
     gameScore.draws = 0;
@@ -131,17 +131,17 @@ function resetGame() {
         "<div class='line'>Scor: 0 - 0</div>" +
         "<div class='line'>Runde: 0</div>" +
         "<div class='line'>Conducător: Egalitate</div>";
-}
+};
 
-rockButton.addEventListener("click", function() {
+rockButton.addEventListener("click", () => {
     playRound("piatra");
 });
 
-paperButton.addEventListener("click", function() {
+paperButton.addEventListener("click", () => {
     playRound("hartia");
 });
 
-scissorsButton.addEventListener("click", function() {
+scissorsButton.addEventListener("click", () => {
     playRound("foarfeca");
 });
 
