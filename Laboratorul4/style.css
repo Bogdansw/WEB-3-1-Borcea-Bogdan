@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+#catalog, #rezultatCautare {
+    white-space: pre-line;
+}
+
+#inputNume, #inputVarsta, #inputNota {
+    margin: 8px 4px 8px 0;
+}
+
+button {
+    margin: 4px 2px;
+}

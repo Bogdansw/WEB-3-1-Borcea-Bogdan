@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Laborator 4 - Liste si Array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section>
+        <h3>Lista de cumparaturi</h3>
+
+        <input type="text" id="produsNou" placeholder="Introdu un produs">
+
+        <button onclick="adaugaLaInceput()">Adauga la inceput</button>
+        <button onclick="adaugaLaSfarsit()">Adauga la sfarsit</button>
+        <button onclick="eliminaPrimul()">Sterge primul</button>
+        <button onclick="eliminaUltimul()">Sterge ultimul</button>
+
+        <p id="listaCumparaturi"></p>
+    </section>
+
+    <section>
+        <h3>CATALOG ELECTRONIC</h3>
+
+        <p id="totalElevi"></p>
+        <div id="catalog"></div>
+    </section>
+
+    <section>
+        <h3>Adauga elev</h3>
+
+        <input type="text" id="inputNume" placeholder="Nume">
+        <input type="number" id="inputVarsta" placeholder="Varsta">
+        <input type="number" id="inputNota" placeholder="Nota">
+
+        <button onclick="adaugaElev()">Adauga elev</button>
+        <p id="mesajAdaugare"></p>
+    </section>
+
+    <section>
+        <h3>Sterge elev</h3>
+
+        <input type="text" id="numeStergere" placeholder="Numele elevului">
+        <button onclick="stergeElev()">Sterge elev</button>
+        <p id="mesajStergere"></p>
+    </section>
+
+    <section>
+        <h3>Cauta elev</h3>
+
+        <input type="text" id="numeCautare" placeholder="Numele elevului">
+        <button onclick="cautaElev()">Cauta</button>
+        <p id="rezultatCautare"></p>
+    </section>
+
+    <script src="script.js" charset="UTF-8"></script>
+</body>
+</html>
