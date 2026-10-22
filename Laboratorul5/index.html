@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista studenților</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <div>
+                <h1>Lista studenților</h1>
+                <p>Gestionarea studenților și aranjarea cardurilor cu CSS Flexbox</p>
+            </div>
+            <div class="total">Total studenți: <strong id="students-count">0</strong></div>
+        </header>
+
+        <section class="panel">
+            <h2>Adaugă student</h2>
+
+            <form id="student-form" novalidate>
+                <div class="form-grid">
+                    <label>
+                        Nume
+                        <input type="text" id="nume" placeholder="Ex: Ana Popescu">
+                    </label>
+
+                    <label>
+                        Grupa
+                        <input type="text" id="grupa" placeholder="Ex: SI-231">
+                    </label>
+
+                    <label>
+                        Vârsta
+                        <input type="number" id="varsta" min="14" max="100" step="1" placeholder="Ex: 20">
+                    </label>
+
+                    <label>
+                        Specialitatea
+                        <select id="specialitate">
+                            <option value="">Alege specialitatea</option>
+                            <option value="DAW">DAW</option>
+                            <option value="PTPP">PTPP</option>
+                            <option value="RC">RC</option>
+                            <option value="C">C</option>
+                            <option value="TA">TA</option>
+                            <option value="DTTA">DTTA</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Avatar
+                        <select id="avatar">
+                            <option value="">Alege avatarul</option>
+                            <option value="👩‍💻">👩‍💻</option>
+                            <option value="🧑‍💻">🧑‍💻</option>
+                            <option value="👨‍💻">👨‍💻</option>
+                            <option value="👩‍🎓">👩‍🎓</option>
+                            <option value="👨‍🎓">👨‍🎓</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="primary-button">Adaugă student</button>
+                    <p id="form-message" class="form-message" aria-live="polite"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="panel-title">
+                <h2>Studenți</h2>
+                <span>Control Flexbox</span>
+            </div>
+
+            <div class="controls">
+                <div class="control">
+                    <span class="control-label">justify-content</span>
+                    <div class="button-row" data-control="justify">
+                        <button type="button" class="option-button active" data-value="flex-start">flex-start</button>
+                        <button type="button" class="option-button" data-value="center">center</button>
+                        <button type="button" class="option-button" data-value="flex-end">flex-end</button>
+                        <button type="button" class="option-button" data-value="space-between">space-between</button>
+                        <button type="button" class="option-button" data-value="space-around">space-around</button>
+                        <button type="button" class="option-button" data-value="space-evenly">space-evenly</button>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <span class="control-label">align-items</span>
+                    <div class="button-row" data-control="align">
+                        <button type="button" class="option-button active" data-value="stretch">stretch</button>
+                        <button type="button" class="option-button" data-value="flex-start">flex-start</button>
+                        <button type="button" class="option-button" data-value="center">center</button>
+                        <button type="button" class="option-button" data-value="flex-end">flex-end</button>
+                        <button type="button" class="option-button" data-value="baseline">baseline</button>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <span class="control-label">flex-wrap</span>
+                    <div class="button-row" data-control="wrap">
+                        <button type="button" class="option-button active" data-value="wrap">wrap</button>
+                        <button type="button" class="option-button" data-value="nowrap">nowrap</button>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <label class="control-label" for="gap">gap: <span id="gap-value">16</span>px</label>
+                    <input type="range" id="gap" min="0" max="50" value="16" step="2">
+                </div>
+            </div>
+
+            <div id="students-list" class="students-list"></div>
+            <p id="empty-message" class="empty-message" hidden>Nu există studenți în listă.</p>
+        </section>
+    </main>
+</body>
+</html>
