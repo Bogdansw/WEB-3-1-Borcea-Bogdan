@@ -1,0 +1,12 @@
+.students-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+}
+
+.student-card {
+    flex: 0 0 250px;
+}
